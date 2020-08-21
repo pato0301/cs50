@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" rel="stylesheet">
+        <link href="styles.css" rel="stylesheet">
+        <title>My photos</title>
+    </head>
+    <body class="photo_body">
+        <div id="wrapper">
+            <div id="first">
+                <img src="robot.jpg" width="300" height="300" title="Toy Car" alt="Toy Car" id=photo>
+            </div>
+            <div id="second">
+                <div class="second-top">
+                   <p class=paragraph>
+                       This photo is shows my first robot build, it is a car that moves back and forward, stopping before it collides with the wall
+                   </p>
+                   <p class="paragraph">
+                      Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+                      Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu.
+                      n enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt.</p>
+                </div>
+                <div class="bottom_second">
+                     <button type="button" onclick="visitPage();" class="btn btn-primary back_button">HomePage</button>
+                </div>
+            </div>
+        </div>
+        <script>
+            function visitPage(){
+                window.location='index.html';
+            }
+        </script>
+    </body>
+</html>

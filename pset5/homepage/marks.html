@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head id="marks">
+      <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" rel="stylesheet">
+      <link href="styles.css" rel="stylesheet">
+      <style>
+        table, th, td {
+        border: 1px solid black;
+        }
+      </style>
+      <title>My Marks</title>
+  </head>
+  <body id=marks_body>
+    <p id="marks_title">
+      If you want to learn more about each subject click on the subject
+    </p>
+    <div class="tabla_notas parent">
+      <table >
+            <tr>
+          <th>Subject</th>
+          <th>Mark</th>
+        </tr>
+        <tr>
+          <td><a href="math.html">Math</a></td>
+          <td>9/10</td>
+        </tr>
+        <tr>
+          <td><a href="spanish.html">Spanish</a></td>
+          <td>8/10</td>
+        </tr>
+        <tr>
+          <td><a href="english.html">English</a></td>
+          <td>9/10</td>
+        </tr>
+        <tr>
+          <td><a href="computer.html">Computer Science</a></td>
+          <td>9/10</td>
+        </tr>
+      </table>
+      <div class="bottom_marks">
+        <button type="button" onclick="visitPage();" class="btn btn-primary back_button">HomePage</button>
+      </div>
+    </div>
+    <script>
+      function visitPage(){
+        window.location='index.html';
+      }
+    </script>
+  </body>
+</html>

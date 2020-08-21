@@ -1,0 +1,144 @@
+#main_body {
+  border: 15px solid blue;
+  padding: 50px;
+  margin: 20px;
+  background-color: lightyellow;
+}
+#main_div {
+  border: 15px solid green;
+  padding: 50px;
+  margin-top: 2%;
+  margin-bottom: 5%;
+  text-align: center;
+  background-color: lightgrey;
+}
+#title {
+     color:red;
+     font-weight:bold;
+     text-decoration: underline;
+     font-size: 65px;
+     font-family: "Times New Roman", Times, serif;
+}
+#subtitle {
+     color:black;
+     font-weight:normal;
+     font-size: 34px;
+     font-family: "Times New Roman", Times, serif;
+     font-style: italic;
+}
+.paragraph{
+    text-align: justify;
+    color:black;
+    font-weight:normal;
+    font-size: 18px;
+    font-family: "Times New Roman", Times, serif;
+}
+#robot_button{
+    color: white;
+    text-align: center;
+    opacity: 0.6;
+    font-weight:bold;
+    font-family: "Arial", Verdana, serif;
+}
+.back_button{
+    text-align: center;
+}
+.general_button{
+    color: white;
+    background-color: red;
+    border-radius: 8px;
+    padding: 12px 28px;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    font-weight:bold;
+    font-family: "Arial", Verdana, serif;
+}
+.general_button:hover{
+    background-color: pink;
+}
+a:hover, a:visited, a:link, a:active{
+    text-decoration: none;
+}
+#marks_title{
+    font-weight:bold;
+    text-decoration: underline;
+    text-align: center;
+    font-size: 35px;
+    font-family: "Times New Roman", Times, serif;
+    margin-bottom: 15px;
+    margin-left: 15px;
+}
+.tabla_notas{
+    text-align: center;
+    width: 50%;
+    margin: 0 auto 10px 15px;
+}
+#marks_body {
+  border: 15px solid orange;
+  padding: 50px;
+  margin: 20px;
+  background-color: lightyellow;
+}
+#photo{
+    padding: 10px;
+    margin: 20px;
+    background-color: lightyellow;
+}
+img {
+  width: 80%;
+  height: auto;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+.photo_body{
+    background-color: lightyellow;
+}
+#wrapper{
+    width: 100%;
+    height: 600px;
+    /*border: 10px solid blue;*/
+}
+#first {
+    width:50%;
+    height: 100%;
+    /*border: 1px solid red;*/
+    float: left;
+}
+#second {
+    width: 50%;
+    height: 100%;
+    /*border: 10px solid green;*/
+    float: left;
+    padding: 50px;
+    position: relative;
+}
+.second-top{
+    /*border: 10px solid green;*/
+    float: top;
+}
+.bottom_second{
+        position: absolute;
+        top: 90%;
+        right:4%;
+        float:bottom;
+        float:right;
+}
+.bottom_marks{
+        position: absolute;
+        top: 37%;
+        right:4%;
+        /*float:bottom;*/
+        float:right;
+}
+.bottom_subjects{
+        position: absolute;
+        top: 7%;
+        right:4%;
+        float:bottom;
+        float:right;
+}
+h2{
+    text-decoration: underline;
+    text-align: center;
+}
