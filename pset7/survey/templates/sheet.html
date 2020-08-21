@@ -1,0 +1,39 @@
+{% extends "layout.html" %}
+
+{% block main %}
+    <h1 class="mb-3">Sheet</h1>
+
+    <table id="dt-table" class="table table-striped table-bordered"  style="width:100%">
+      <thead  class="table table-striped table-bordered">
+        <tr>
+          <th>Firstname</th>
+          <th>Lastname</th>
+          <th>Email</th>
+          <th>Character</th>
+          <th>Gender</th>
+          <th>Kind of Character</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for survey in surveys %}
+        <tr>
+          <td>{{ survey["First_Name"] }}</td>
+          <td>{{ survey["Last_Name"] }}</td>
+          <td>{{ survey["Email"] }}</td>
+          <td>{{ survey["Character"] }}</td>
+          <td>{{ survey["Gender"] }}</td>
+          <td>{{ survey["Type_Char"] }}</td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+    <script>
+      function init() {
+        const table = $("#dt-table").DataTable();
+        const tableData = getTableData(table);
+        createHighcharts(tableData);
+        setTableEvents(table);
+      }
+      // (document).ready(function() {$('#example').DataTable();} );
+    </script>
+{% endblock %}

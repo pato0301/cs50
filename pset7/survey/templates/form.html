@@ -1,0 +1,113 @@
+{% extends "layout.html" %}
+
+{% block main %}
+
+    <!-- http://getbootstrap.com/docs/4.1/content/typography/ -->
+    <h1 class="mb-3">Form</h1>
+
+    <!-- http://getbootstrap.com/docs/4.1/components/forms/ -->
+    <form action="/form" method="post">
+
+        <!-- TODO -->
+        <br>
+        <div class="form-group">
+            <label for="exampleFormControlInput1">First Name</label>
+            <input type="text" class="form-control" name="firstName" id="exampleFormControlInput1" placeholder="First Name">
+        </div>
+        <div class="form-group">
+            <label for="exampleFormControlInput1">Last Name Name</label>
+            <input type="text" class="form-control" name="lastName" id="exampleFormControlInput2" placeholder="Last Name">
+        </div>
+        <div class="form-group">
+            <label for="exampleFormControlInput1">Email address</label>
+            <input type="email" class="form-control" name="email" id="exampleFormControlInput3" placeholder="name@example.com">
+        </div>
+        <select class="form-control" name="character">
+          <option disabled selected value="">Star Wars Character</option>
+          <option value="yoda">Yoda</option>
+          <option value="anakin">Anakin</option>
+          <option value="dart_vader">Darth Vader</option>
+          <option value="Luke_Skywalker">Luke Skywalker</option>
+          <option value="Han_Solo">Han Solo</option>
+          <option value="Chewbacca">Chewbacca</option>
+          <option value="R2-D2">R2-D2</option>
+          <option value="C-3PO">C-3PO</option>
+          <option value="Padme">Padme</option>
+          <option value="Dooku">Count Dooku</option>
+          <option value="Darth_Sidious">Darth Sidious</option>
+          <option value="Jabba">Jabba El Hutt</option>
+          <option value="Darth_Maul">Darth Maul</option>
+          <option value="Grievous">General Grievous</option>
+        </select>
+        <br><br>
+        <div class="control" >
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="gender" id="inlineRadio1" value="Male">
+            <label class="form-check-label" for="inlineRadio1">Male</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="gender" id="inlineRadio2" value="Female">
+            <label class="form-check-label" for="inlineRadio2">Female</label>
+          </div>
+        </div>
+        <br>
+        <div class="control">
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="jedi" id="inlineRadio3" value="Jedi">
+            <label class="form-check-label" for="inlineRadio1">Jedi</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="jedi" id="inlineRadio4" value="Sith">
+            <label class="form-check-label" for="inlineRadio2">Sith</label>
+          </div>
+        </div>
+        <br><br>
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+          <label class="form-check-label" for="inlineCheckbox1">I agree giving my soul to this website</label>
+        </div>
+        <br><br>
+
+        <!-- http://getbootstrap.com/docs/4.1/components/buttons/ -->
+        <button class="btn btn-primary" type="submit">Submit</button>
+
+    </form>
+
+
+    <script>
+        /* TODO */
+        document.querySelector('form').onsubmit = function() {
+            if (!document.querySelector("div.form-group input[name='firstName']").value) {
+                alert('You must provide your First Name!');
+                return false;
+            }
+            else if (!document.querySelector("div.form-group input[name='lastName']").value) {
+                alert('You must provide your Last Name!');
+                return false;
+            }
+            else if (!document.querySelector("div.form-group input[name='email']").value) {
+                alert('You must provide your Email!');
+                return false;
+            }
+            else if (!document.getElementById('inlineRadio1').checked && !document.getElementById('inlineRadio2').checked) {
+                alert('You must provide your Gender!');
+                return false;
+            }
+            else if (!document.getElementById('inlineRadio3').checked && !document.getElementById('inlineRadio4').checked) {
+                alert('You must provide your Character Type!');
+                return false;
+            }
+            else if (!document.getElementById('inlineCheckbox1').checked) {
+                alert('You must give us your soul in order to access!');
+                return false;
+            }
+            else if (!document.querySelector("select").value) {
+                alert('You must provide your Character');
+                return false;
+            }
+            return true;
+        };
+
+    </script>
+
+{% endblock %}
