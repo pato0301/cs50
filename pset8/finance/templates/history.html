@@ -1,0 +1,34 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    History
+{% endblock %}
+
+{% block main %}
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th scope="col">Symbol</th>
+          <th scope="col">Shares</th>
+          <th scope="col">Prices</th>
+          <th scope="col">Transacted</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for stock in stocks %}
+          <tr id={{ stocks.id }}>
+            <th scope="row">{{ stock.symbol }}</th>
+            <td>{{ stock.q_shares }}</td>
+            <td>{{ current_price[stock.symbol] }}</td>
+            <td>{{ stock.date }}</td>
+          </tr>
+        {% endfor %}
+      </tbody>
+      <tfoot>
+            <tr>
+                <td colspan="4"></td>
+                <td></td>
+            </tr>
+        </tfoot>
+    </table>
+{% endblock %}
